@@ -1,0 +1,193 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <!-- For internal use. -->
+  <meta name="author" content="mangosango, aka Sang Jin Lee" />
+  <meta name="resource-type" content="document" />
+  <meta name="distribution" content="global" />
+  <meta name="rating" content="general" />
+  <meta name="robots" content="no-index" /> <!-- change this -->
+  <meta name="copyright" content="Copyright 2011 Sang Jin Lee, mangosango">
+
+  <!-- LOAD @FONTFACE FONTS -->
+  <link href="font/LeagueGothic/stylesheet.css" rel="stylesheet" type="text/css" />
+
+  <!-- LOAD CSS STYLES -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/text.css" />
+  <link rel="stylesheet" href="css/960.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link type="text/css" href="css/cupertino/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
+
+  <!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
+  <script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+
+  <!-- LOAD JQUERY LIBRARIES -->
+  <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+  <!-- LOAD DOCUMENT.LOAD FUNCTIONS -->
+  <script type="text/javascript" src="js/onLoad.js"></script>
+
+  <title>The Dartmouth D-Planner | Tutorial</title>
+
+</head>
+
+<body>
+
+  <div
+    style="width: 100%; height: 65px; padding-top: 35px; background: #fff; border-bottom: 1px solid #ddd; margin-bottom: 40px;">
+    <div class="container_12" id="topbar">
+      <!-- topbar Content goes here -->
+      <div class="grid_6" style="">
+        <a href="grid.html" class="league external" style="font-size: 24px; line-height: 18px;">The D-Plan Game</a>
+        <p style="font-size: 10px;"></p>
+        <p style="font-size: 8px; margin-bottom: 5px; margin-top: -15px;"><i>Coded by <a target="_new"
+              style="color: #999">Sang Jin Lee '13</a>, <a target="_new" style="color: #999">Diana Salsbury '15</a>, and
+            <a target="_new" style="color: #999">Roman Huszar '17</a>. </i>
+      </div>
+      <div class="grid_6" align="right">
+        <div style="padding-right: 35px;">
+          <ul id="navMenu">
+            <li><a href="disclaimer.html" target="_new" class="external">
+                <font color="red">DISCLAIMER</font>
+              </a>
+            <li><a href="http://www.dartmouth.edu/~ovis/" class="external" target="_new">OVIS home</a></li>
+            <li><a href="http://www.dartmouth.edu/~ovis/contact/index.html" target="_new" class="external">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="welcome_1" class="" style="min-height: 70%;">
+    <div class="container_12">
+      <div align="center" class="grid_12" style="padding-bottom: 20px;">
+        <span id="slideshowTitle" class="league" style="font-size: 48px;">Tutorial<br /></span>
+      </div>
+      <div id="slideshowContainer" class="grid_12 ui-corner-all"
+        style="background: #fff; height: 510px; border: 1px solid #ddd; padding-bottom: 10px; margin-bottom: 50px;">
+        <div style="padding: 30px 30px 75px 30px;"><!-- PADDING HACK FOR JQUERY CYCLE -->
+          <div id="welcomeInnerText">
+            <div class="slideshowInner" style="width: 860px;">
+              <h1 align="center">Part 1 - Planning Tools<br /><img src="img/new_tut_1.jpg" width="600" height="280"
+                  alt="tut_1" /></h1>
+              <p align="center">click the <strong>Add A To-Do List </strong>box and a free-form text box appears at the
+                bottom of the screen</p>
+            </div>
+
+            <div class="slideshowInner" style="width: 860px;">
+              <h1 align="center">Part 1 - Planning Tools<br /><img src="img/new_tut_2.jpg" width="600" height="280"
+                  alt="tut_1" /></h1>
+              <p align="center">click the <strong>Restart</strong> button to clear out your grid and start over.</p>
+            </div>
+
+            <div class="slideshowInner" style="width: 860px;">
+              <h1 align="center">Part 1 - Planning Tools<br /><img src="img/new_tut_3.jpg" alt="tut_2" width="800"
+                  height="300" class="ui-corner-all" style="margin-top: 10px;" /></h1>
+              <p align="center">click the <strong>Analysis</strong> button and an analysis of your DPlan will appear at
+                the bottom of the screen.</p>
+            </div>
+
+            <div class="slideshowInner" style="width: 860px;">
+              <h1 align="center">Part 1 - Planning Tools<br /><img src="img/new_tut_4.jpg" alt="tut_2" width="800"
+                  height="300" class="ui-corner-all" style="margin-top: 10px;" /></h1>
+              <p align="center">The D-Planner will tell you when a selection could affect your Visa.
+                <strong>However</strong>, you need to understand the consequences of your choices. The D-Planner will
+                keep track of warnings in the warnings box underneath the grid. Feel free to play around, and the
+                D-Planner will let you know what extra steps you may need to take!</p>
+            </div>
+
+            <div class="slideshowInner" style="width: 860px;">
+              <h1 align="center">Part 2 - The Grid<br /><img src="img/new_tut_5.jpg" width="800" height="300"
+                  class="ui-corner-all" style="margin-top: 10px;" /></h1>
+              <p align="center">Enter a Title, Preference, and expected Term of graduation</p>
+            </div>
+
+            <div class="slideshowInner" style="width: 860px;">
+              <h1 align="center"> Part 3 - The Terms<br /><img style="margin-left: 5px; " src="img/new_tut_6.jpg"
+                  width="800" height="300" class="ui-corner-all" style="margin-top: 10px;" /></h1>
+              <div style="margin-top: -70px;">
+                <p align="center"><strong>R</strong>: you are enrolled and studying on the Dartmouth College campus</p>
+                <p align="center"><strong>O</strong>: you are enrolled and studying on an LSA or FSP through Dartmouth
+                  College</p>
+                <p align="center"><strong>X</strong>: you are enrolled and studying on an official exchange program
+                  through Dartmouth College</p>
+                <p align="center"><strong>T(S)</strong>: you are enrolled and studying on an independent transfer term
+                  at a college approved by Dartmouth for credit, and approved by OVIS for SEVIS status</p>
+              </div>
+            </div>
+            <div class="slideshowInner" style="width: 860px;">
+              <h1 align="center"> Part 3 - The Terms<br /><img style="margin-left: 5px; " src="img/new_tut_7.jpg"
+                  width="800" height="300" class="ui-corner-all" style="margin-top: 10px;" /></h1>
+              <div style="margin-top: -25px;">
+                <p align="center"><strong>L(Earned)</strong>: Off-term taken only following 3 terms of R, O, or X. You
+                  may stay in the U.S. or leave but cannot work anywhere in the U.S. except for a Dartmouth College
+                  paycheck</p>
+                <p align="center"><strong>L(OPT)</strong>: you have requested OPT and may work in the U.S. in their
+                  field of study </p>
+              </div>
+            </div>
+            <div class="slideshowInner" style="width: 860px;">
+              <h1 align="center"> Part 3 - The Terms<br /><img style="margin-left: 5px; " src="img/new_tut_8.jpg"
+                  width="800" height="300" class="ui-corner-all" style="margin-top: 10px;" /></h1>
+              <div style="margin-top: -25px;">
+                <p align="center"><strong>L(Unearned)</strong>: Off-term taken following less than 3 terms of R, O, or
+                  X.</p>
+                <p align="center"><strong>L(LoA)</strong>: A term of Leave of Absence. I-20 will be terminated, visa
+                  status is lost, but you will take an R term in the next term and will request reactivation of your
+                  I-20</p>
+              </div>
+            </div>
+            <div class="slideshowInner" style="width: 860px;">
+              <h1 align="center">Part 4 - Drag and Drop!<br /><img src="img/new_tut_9.jpg" width="800" height="300"
+                  class="ui-corner-all" style="margin-top: 10px;" /></h1>
+              <p align="center">To move items from the boxes onto the grid, just drag and drop - it's that simple.</p>
+            </div>
+
+            <div class="slideshowInner" style="width: 860px;">
+              <h1 align="center">Part 5 - Explore!<br /><img src="img/new_tut_10.jpg" width="800" height="300"
+                  class="ui-corner-all" style="margin-top: 10px;" /></h1>
+              <p align="center">Don't be afraid to explore and try new things!<br /><br /><a
+                  class="indexBtn ui-corner-all" href="disclaimer.html" style="line-height: 40px;">Get Started</a></p>
+              <br />
+            </div>
+
+            <div class="slideshowInner" style="width: 860px;">
+              <h1 align="center">Part 6 - Print and Discuss with Ovis<br /><img src="img/new_tut_11.jpg" width="800"
+                  height="300" class="ui-corner-all" style="margin-top: 10px;" /></h1>
+              <p align="center">When you have a DPlan you would like to save, use the print function or take a screen
+                shot of your grid to bring in for discussion with OVIS.<br /><br /><a class="indexBtn ui-corner-all"
+                  href="disclaimer.html" style="line-height: 40px;">Get Started</a></p><br />
+            </div>
+          </div>
+          <div id="navBtns"><a href="#" class="back">Back</a><a href="#" class="next">Next</a></div>
+        </div>
+      </div>
+      <div id="footer" class="grid_12"
+        style="padding-top: 30px; margin-top: 40px; color: #aaa; border-top: 1px dotted #aaa;">
+        <p align="center" style="font-size: 10px;">&copy 2011 Trustees of Dartmouth College, originally created and
+          designed by Marcia S. Calloway, sponsored by
+          <a target="_new" style="color: #999" href="http://www.cs.dartmouth.edu/~digitalarts/">
+            Dartmouth Digital Arts at Dartmouth</a>, designed and Coded by <a target="_new" style="color: #999">
+            Sang Jin Lee '13</a>, <a target="_new" style="color: #999">Diana Salsbury '15</a>, and <a target="_new"
+            style="color: #999">Roman Huszar '17</a>.
+        </p>
+        <center>
+          <a href="http://www.dali.dartmouth.edu">
+            <img src="img/Small_curl.jpg" height="50px;" />
+          </a>
+        </center>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

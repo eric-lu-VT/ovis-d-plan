@@ -1,0 +1,433 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <!-- For internal use. -->
+  <meta name="author" content="mangosango, aka Sang Jin Lee" />
+  <meta name="resource-type" content="document" />
+  <meta name="distribution" content="global" />
+  <meta name="rating" content="general" />
+  <meta name="robots" content="no-index" /> <!-- change this -->
+  <meta name="copyright" content="Copyright 2011 Sang Jin Lee, mangosango">
+
+  <!-- LOAD @FONTFACE FONTS -->
+  <link href="font/LeagueGothic/stylesheet.css" rel="stylesheet" type="text/css" />
+
+  <!-- LOAD CSS STYLES -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/text.css" />
+  <link rel="stylesheet" href="css/960.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link type="text/css" href="css/cupertino/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/Tooltip.css" />
+  <link rel="stylesheet" href="css/print.css" media="print" />
+
+  <!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
+  <script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+
+  <!-- LOAD JQUERY LIBRARIES -->
+  <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+  <script type="text/javascript" src="js/Tooltip.js"></script>
+
+  <!-- LOAD DOCUMENT.LOAD FUNCTIONS -->
+  <script type="text/javascript" src="js/onLoad.js"></script>
+
+
+
+  <title>The D-Plan Game</title>
+
+</head>
+
+<body>
+
+  <div
+    style="width: 100%; height: 65px; padding-top: 35px; background: #fff; border-bottom: 1px solid #ddd; margin-bottom: 40px;">
+    <div class="container_12" id="topbar">
+      <!-- topbar Content goes here -->
+      <div class="grid_6" style="">
+        <a href="grid.html" class="league external" style="font-size: 24px; line-height: 18px;">The D-Plan Game</a>
+        <p style="font-size: 10px;"></p>
+        <p style="font-size: 8px; margin-bottom: 5px; margin-top: -15px;"><i>Coded by <a target="_new"
+              style="color: #999">Sang Jin Lee '13</a>, <a target="_new" style="color: #999">Diana Salsbury '15</a>, and
+            <a target="_new" style="color: #999">Roman Huszar '17</a> </i>
+      </div>
+      <div class="grid_6" align="right">
+        <div style="padding-right: 35px;">
+          <ul id="navMenu">
+            <li><a href="disclaimer.html" target="_new" class="external">
+                <font color="red">DISCLAIMER</font>
+              </a>
+            <li><a href="http://www.dartmouth.edu/~ovis/" class="external" target="_new">OVIS home</a></li>
+            <li><a href="http://www.dartmouth.edu/~ovis/contact/index.html" target="_new" class="external">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="dialog-flex" title="Warning!" align="center">
+    <span class="ui-icon ui-icon-alert" style="clear: both;"></span><span id="errorText"></span>
+    <br /><br />
+    <p style="font-size: 10px;">If you need help, don't hesitate to contact us at
+      <b>"visa.and.immigration.services@dartmouth.edu"</b>!</p>
+  </div>
+
+  <div id="dialog-notflex" title="ERROR!" align="center">
+    <span class="ui-icon ui-icon-alert" style="clear: both;"></span><span id="errorText2"></span>
+    <br /><br />
+    <p style="font-size: 10px;">If you need help, don't hesitate to contact us at
+      <b>"visa.and.immigration.services@dartmouth.edu"</b>!</p>
+  </div>
+
+  <div id="analysis-confirm" class="startHidden" title="Analysis" align="center">
+    <span class="ui-icon ui-icon-alert" style="clear: both;"></span><span id="analysisText"></span>
+    <br /><br />
+    <p style="font-size: 10px;">If you need help, don't hesitate to contact us at
+      <b>"visa.and.immigration.services@dartmouth.edu"</b>!</p>
+  </div>
+
+  <div id="dropArea" class="startHidden" style="margin-top: 10px;">
+    <div class="container_12 noPrint">
+
+      <div class="grid_3 alpha"
+        style="margin-top: 10px; padding-top: 15px; border-bottom: 1px dotted rgb(170, 170, 170); height: 26px;">
+        <a id="addNotes" class="ui-corner-all" href="javascript:void(0);" style="display:block;"><span class="league"
+            style="font-size: 24px;">Add a To-Do List</span></a>
+      </div>
+
+      <div class="grid_3"
+        style="margin-top: 10px; padding-top: 15px; border-bottom: 1px dotted rgb(170, 170, 170); height: 26px;">
+        <a id="clear" class="ui-corner-all" href="javascript:void(0);" style="display:block;"><span class="league"
+            style="font-size: 24px;">
+            <center>Restart</center>
+          </span></a>
+      </div>
+
+      <div class="grid_3"
+        style="margin-top: 10px; padding-top: 15px; border-bottom: 1px dotted rgb(170, 170, 170); height: 26px;">
+        <a id="analyze" class="ui-corner-all" href="javascript:void(0);" style="display:block;"><span class="league"
+            style="font-size: 24px;">
+            <center>Analyze</center>
+          </span></a>
+      </div>
+
+      <div class="grid_3 omega"
+        style="margin-top: 10px; padding-top: 15px; border-bottom: 1px dotted rgb(170, 170, 170); height: 26px;">
+        <a id="printPage" class="ui-corner-all" href="javascript:void(0);" style="display:block;"><span class="league"
+            style="font-size: 24px;">
+            <center>Print</center>
+          </span></a>
+      </div>
+    </div>
+    </br>
+    <div style="margin-top: 20px;" class="container_12" id="mainGrid">
+      <form id="myForm">
+        <input type="text" class="bigText league" placeholder=" Title"
+          style="display: inline-block; height: 40px; margin-bottom: 10px; margin-top: 0px; padding-top: 0px; width: 250px;"
+          id="titleBox" />
+        <select id="DDLpreference" style="display: inline-block;">
+          <option value="None Selected">Preference</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+        <br>
+        I will graduate after:
+        <select id="DDLGradTerm" style="display: inline-block;">
+          <option value="None Selected">Term</option>
+          <option value="1">Fall</option>
+          <option value="2">Winter</option>
+          <option value="3">Spring</option>
+          <option value="4">Summer</option>
+        </select>
+        <select id="DDLGradYear" style="display: inline-block;">
+          <option value="Year">Year</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+
+
+      </form>
+      <div class="grid_1">
+        <div class="grid_1 alpha yearData">
+          <p>
+          <form>
+            <input style="font-size: 25px; margin-left: -10px; margin-top: 10px; width: 70px;" class="league"
+              id="academicYear1" type="text" name="Year1" placeholder="Year 1"
+              style="width: 75px; height: 40px; margin-left: -26px; margin-top: -13px;" />
+          </form>
+          </p>
+        </div>
+        <div class="grid_1 alpha yearData">
+          <p>
+          <form>
+            <input style="font-size: 25px; margin-left: -10px; margin-top: 10px; width: 70px;" class="league"
+              id="academicYear2" type="text" name="Year1" placeholder="Year 2"
+              style="width: 75px; height: 40px; margin-left: -26px; margin-top: -13px;" />
+          </form>
+          </p>
+        </div>
+        <div class="grid_1 alpha yearData">
+          <p>
+          <form>
+            <input style="font-size: 25px; margin-left: -10px; margin-top: 10px; width: 70px;" class="league"
+              id="academicYear3" type="text" name="Year1" placeholder="Year 3"
+              style="width: 75px; height: 40px; margin-left: -26px; margin-top: -13px;" />
+          </form>
+          </p>
+        </div>
+        <div class="grid_1 alpha yearData">
+          <p>
+          <form>
+            <input style="font-size: 25px; margin-left: -10px; margin-top: 10px; width: 70px;" class="league"
+              id="academicYear4" type="text" name="Year1" placeholder="Year 4"
+              style="width: 75px; height: 40px; margin-left: -26px; margin-top: -13px;" />
+          </form>
+          </p>
+        </div>
+        <div id="addYearLabelContainer">
+
+        </div>
+      </div>
+      <div class="grid_8 noPrint"><!-- Container for the droppable grid -->
+
+
+        <!-- Year 0 - TESTING PURPOSES!! -->
+        <div class="grid_2 mainGridItem startHidden L" id="0_1"></div>
+        <div class="grid_2 mainGridItem startHidden L" id="0_2"></div>
+        <div class="grid_2 mainGridItem startHidden L" id="0_3"></div>
+        <div class="grid_2 mainGridItem startHidden L" id="0_4"></div>
+
+        <!-- Term labels -->
+        <div class="row_1">
+          <div class="grid_2 league" style="font-size: 24px;">FALL</div>
+          <div class="grid_2 league" style="font-size: 24px;">WINTER</div>
+          <div class="grid_2 league" style="font-size: 24px;">SPRING</div>
+          <div class="grid_2 league" style="font-size: 24px;">SUMMER</div>
+        </div>
+
+        <!-- Year 1 -->
+        <div class="row_1 noPrint">
+          <div class="grid_2 mainGridItem RNotMoveable alpha"
+            onmouseover="tooltip.show('You cannot change this term from an R term. You MUST be on your freshman fall, winter, and spring.');"
+            onmouseout="tooltip.hide();" id="1_1">
+            <font color="white" ; style="margin-left: 10px;">Year 1, Fall</font>
+          </div>
+          <div class="grid_2 mainGridItem RNotMoveable"
+            onmouseover="tooltip.show('You cannot change this term from an R term. You MUST be on your freshman fall, winter, and spring.');"
+            onmouseout="tooltip.hide();" id="1_2">
+            <font color="white" ; style="margin-left: 10px;">Year 1, Winter</font>
+          </div>
+          <div class="grid_2 mainGridItem RNotMoveable"
+            onmouseover="tooltip.show('You cannot change this term from an R term. You MUST be on your freshman fall, winter, and spring.');"
+            onmouseout="tooltip.hide();" id="1_3">
+            <font color="white" ; style="margin-left: 10px;">Year 1, Spring</font>
+          </div>
+          <div class="grid_2 mainGridItem omega" id="1_4">
+            <font color="white" ; style="margin-left: 10px;">Year 1, Summer</font>
+          </div>
+        </div>
+
+        <!-- Year 2 -->
+        <div class="row_2 noPrint">
+          <div class="grid_2 mainGridItem D alpha" id="2_1">
+            <font color="white" ; style="margin-left: 10px;">Year 2, Fall</font>
+          </div>
+          <div class="grid_2 mainGridItem" id="2_2">
+            <font color="white" ; style="margin-left: 10px;">Year 2, Winter</font>
+          </div>
+          <div class="grid_2 mainGridItem" id="2_3">
+            <font color="white" ; style="margin-left: 10px;">Year 2, Spring</font>
+          </div>
+          <div class="grid_2 mainGridItem omega" id="2_4">
+            <font color="white" ; style="margin-left: 10px;">Year 2, Summer</font>
+          </div>
+        </div>
+
+        <!-- Year 3 -->
+        <div class="row_3 noPrint">
+          <div class="grid_2 mainGridItem alpha" id="3_1">
+            <font color="white" ; style="margin-left: 10px;">Year 3, Fall</font>
+          </div>
+          <div class="grid_2 mainGridItem" id="3_2">
+            <font color="white" ; style="margin-left: 10px;">Year 3, Winter</font>
+          </div>
+          <div class="grid_2 mainGridItem" id="3_3">
+            <font color="white" ; style="margin-left: 10px;">Year 3, Spring</font>
+          </div>
+          <div class="grid_2 mainGridItem omega" id="3_4">
+            <font color="white" ; style="margin-left: 10px;">Year 3, Summer</font>
+          </div>
+        </div>
+
+        <!-- Year 4 -->
+        <div class="row_4 noPrint">
+          <div class="grid_2 mainGridItem R alpha" id="4_1">
+            <font color="white" ; style="margin-left: 10px;">Year 4, Fall</font>
+          </div>
+          <div class="grid_2 mainGridItem R" id="4_2">
+            <font color="white" ; style="margin-left: 10px;">Year 4, Winter</font>
+          </div>
+          <div class="grid_2 mainGridItem R" id="4_3">
+            <font color="white" ; style="margin-left: 10px;">Year 4, Spring</font>
+          </div>
+          <div class="grid_2 mainGridItem omega" id="4_4">
+            <font color="white" ; style="margin-left: 10px;">Year 4, Summer</font>
+          </div>
+        </div>
+
+        <!-- Year 5 -->
+        <div id="addYearContainer">
+
+        </div>
+
+        <div id="addNewYearContainer" class="grid_4 alpha noPrint">
+          <a class="ui-corner-all" href="javascript:analyze()" id="addNewYear" style="display: block;"><span
+              class="league" style="font-size: 24px;">Add Another Year +<br /></span></a>
+        </div>
+
+        <div id="deleteLatestYearContainer" class="grid_4 omega startHidden noPrint">
+          <a class="ui-corner-all" href="javascript:void(0);" id="deleteLatestYear" style="display: block;"><span
+              class="league" style="font-size: 24px;">Delete Last Year -<br /></span></a>
+        </div>
+
+        <div id="warningsContainer" class="grid_8 warningsBox startHidden"
+          style="margin-left: 0px; width: 600px; margin-top: 15px; padding-top: 15px; padding-left: 20px; border-top: 1px dotted #aaa;">
+
+        </div>
+
+        <div id="analysisContainer" class="grid_8 alpha analysisBox startHidden "
+          style="width:600px; height: 435px; margin-top: 15px; padding-top: 15px; padding-left: 20px; border-top: 1px dotted #aaa;">
+          <a class="ui-corner-all">
+            <span class="league" id="analysisHeader" style="font-size: 24px;">Analysis<br /></span>
+            <div class="league" style="font-size: 15px;" id="analysisText"></div>
+          </a>
+        </div>
+
+        <div id="notesContainer" class="grid_8 alpha notesBox startHidden"
+          style="height: 400px; margin-top: 15px; padding-top: 15px; padding-left: 20px; border-top: 1px dotted #aaa;">
+          <textarea id="notesTextBox" rows="10" cols="80">1. 
+2.
+3.</textarea>
+        </div>
+
+
+
+      </div>
+      <div class="grid_1 noPrint" id="box_white">
+        <div align="center">
+          <span style="font-size: 14px; line-height: 18px;">Enrolled Terms</span>
+          <p style="font-size: 9px; font-weight: bold;">(counts for VISA requirements)</p>
+        </div>
+        <!-- Pick Box goes here -->
+        <div class="grid_1 drag_box_div">
+          <div class="R draggable_box_white" id="1_5"
+            onmouseover="tooltip.show('This is a SEVIS-Enrolled term in residence at Dartmouth College.');"
+            onmouseout="tooltip.hide();" style="margin-left: 10px;"></div>
+        </div>
+        <div class="grid_1 drag_box_div">
+          <div class="O draggable_box_white" id="1_6"
+            onmouseover="tooltip.show('This is a Dartmouth LSA or FSP with admission through Off-Campus Programs Office.');"
+            onmouseout="tooltip.hide();" style="margin-left: 10px;"></div>
+        </div>
+        <div class="grid_1 drag_box_div">
+          <div class="X draggable_box_white" id="2_5"
+            onmouseover="tooltip.show('This is an official Dartmouth College exchange term with admission through Off-Campus Programs Office');"
+            onmouseout="tooltip.hide();" style="margin-left: 10px;"></div>
+        </div>
+        <div class="grid_1 drag_box_div">
+          <div class="T_S draggable_box_white" id="2_6"
+            onmouseover="tooltip.show('This is an independently arranged transfer term with at least 2 courses approved to transfer to Dartmouth College.');"
+            onmouseout="tooltip.hide();" style="margin-left: 10px;"></div>
+        </div>
+        <div class="grid_1 drag_box_div">
+          <div class="L_Thesis draggable_box_white" id="3_5"
+            onmouseover="tooltip.show('This is an L(Thesis) term.  It is a SEVIS-enrolled reduced course load term for completion of the Senior Honors Thesis in the last term.  You can ONLY elect this in your final term. ');"
+            onmouseout="tooltip.hide();" style="margin-left: 10px;"></div>
+        </div>
+      </div>
+      <div align="center" style="color: black;">
+        <span style="font-size: 14px; line-height: 18px;">Non-Enrolled Terms</span>
+        <p style="font-size: 9px; font-weight: bold;">(student remains in visa status)</p>
+      </div>
+      <div class="grid_1 noPrint" id="box_blue" style="padding-bottom: 30px;">
+        <div class="grid_1 drag_box_div">
+          <div class="L_Earned draggable_box_black" id="1_7"
+            style="margin-top: 10px; margin-bottom: 10px; margin-left: -10px;"
+            onmouseover="tooltip.show('This is an earned leave term following some combination of at least 3 R, O, X or T(S) terms where the student may stay in the US or depart.  This cannot be selected unless at least 3 R, O, X or T(S) terms precede it.');"
+            onmouseout="tooltip.hide();"></div>
+        </div>
+        <div class="grid_1 drag_box_div">
+          <div class="L_OPT draggable_box_black" id="2_7" style="margin-left: -10px;"
+            onmouseover="tooltip.show('This is an earned leave term following some combination of at least 3 R, O, X or T(S) terms where the student will stay in the US and use OPT work authorization.  This cannot be selected unless at least 3 R, O, X or T(S) terms precede it.');"
+            onmouseout="tooltip.hide();"></div>
+        </div>
+      </div>
+      <div class="grid_1 noPrint" id="box_black" style="padding-bottom: 30px;">
+        <!-- Pick Box goes here -->
+        <div class="grid_1 drag_box_div">
+          <div class="L_Unearned draggable_box_black" id="1_8"
+            style="margin-top: 10px; margin-bottom: 10px; margin-left: -10px;"
+            onmouseover="tooltip.show('This is a leave term following less than 3 terms of R, O, X or T(S).');"
+            onmouseout="tooltip.hide();"></div>
+        </div>
+        <div class="grid_1 drag_box_div">
+          <div class="L_LOA draggable_box_black" id="2_8" style="margin-left: -10px;"
+            onmouseover="tooltip.show('This is an unearned leave term for the purpose of a Leave of Absence.  You can ONLY select this term between two R terms.');"
+            onmouseout="tooltip.hide();"></div>
+        </div>
+      </div>
+      <div align="center" style="color: black;">
+        <span style="font-size: 14px; line-height: 18px;">Graduated</span>
+        <p style="font-size: 9px; font-weight: bold;">(for terms post-graduation)</p>
+      </div>
+      <div class="grid_1 noPrint" id="box_white_1">
+        <div class="grid_1 drag_box_div">
+          <div class="G draggable_box_white"
+            onmouseover="tooltip.show('Drag onto any blank term that appears on the grid after your last enrolled term');"
+            onmouseout="tooltip.hide();" style="margin-left: 10px;"></div>
+        </div>
+      </div>
+
+
+
+      <div id="footer" class="grid_12"
+        style="padding-top: 30px; margin-top: 40px; color: #aaa; border-top: 1px dotted #aaa;">
+        <p align="center" style="font-size: 10px;">&copy 2011 Trustees of Dartmouth College, originally created and
+          designed by Marcia S. Calloway, sponsored by
+          <a target="_new" style="color: #999" href="http://www.cs.dartmouth.edu/~digitalarts/">
+            Dartmouth Digital Arts at Dartmouth</a>, designed and Coded by <a target="_new" style="color: #999">
+            Sang Jin Lee '13</a>, <a target="_new" style="color: #999">
+            Diana Salsbury '15</a>, and <a target="_new" style="color: #999">
+            Roman Huszar '17</a>.
+        </p>
+        <center>
+          <a href="http://www.dali.dartmouth.edu">
+            <img src="img/Small_curl.jpg" height="50px;" />
+          </a>
+        </center>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="printArea">
+
+  </div>
+
+
+
+
+</body>
+
+</html>-
