@@ -750,7 +750,7 @@ $(function () {
       var ReceiverTerm = ReceiverId.split("_")[0] * ReceiverId.split("_")[1];
       if ((finalTermId == ReceiverId) && ((typeOfTerm != "R") && (typeOfTerm != "G") && (typeOfTerm != "L_Thesis"))) {
         $(this).removeClass("R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned G");
-        $("#errorText").html("Only R, L_Thesis, or G terms are permitted in your selected final term. This selection has been switched to an R.  Change your selected final term if you wish to drop this term here or cancel.");
+        $("#errorText").html("Only R or L_Thesis terms are permitted in your selected final term. This selection has been switched to an R.  Change your selected final term if you wish to drop this term here or cancel.");
         switchToR = 1;
         $(this).addClass("R");
         $("#dialog-flex").dialog('open');
