@@ -34,7 +34,7 @@ Just open the HTML files.
 - Diana Salsbury '15
 - Sang Jin Lee '13
 
-### Maintenince
+### Maintenance
 - Eric Lu '25
 
 ---
