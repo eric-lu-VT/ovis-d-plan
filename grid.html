@@ -40,7 +40,7 @@
 
 
 
-  <title>The D-Plan Game</title>
+  <title>The F-1 D-Planner</title>
 
 </head>
 
@@ -51,7 +51,7 @@
     <div class="container_12" id="topbar">
       <!-- topbar Content goes here -->
       <div class="grid_6" style="">
-        <a href="grid.html" class="league external" style="font-size: 24px; line-height: 18px;">The D-Plan Game</a>
+        <a href="grid.html" class="league external" style="font-size: 24px; line-height: 18px;">The F-1 D-Planner</a>
         <p style="font-size: 10px;"></p>
         <p style="font-size: 8px; margin-bottom: 5px; margin-top: -15px;"><i>Coded by <a target="_new"
               style="color: #999">Sang Jin Lee '13</a>, <a target="_new" style="color: #999">Diana Salsbury '15</a>, and
@@ -76,21 +76,21 @@
   <div id="dialog-flex" title="Warning!" align="center">
     <span class="ui-icon ui-icon-alert" style="clear: both;"></span><span id="errorText"></span>
     <br /><br />
-    <p style="font-size: 10px;">If you need help, don't hesitate to contact us at
+    <p style="font-size: 10px;">If you need help, don’t hesitate to contact us at
       <b>"ovis@Dartmouth.edu"</b>!</p>
   </div>
 
   <div id="dialog-notflex" title="ERROR!" align="center">
     <span class="ui-icon ui-icon-alert" style="clear: both;"></span><span id="errorText2"></span>
     <br /><br />
-    <p style="font-size: 10px;">If you need help, don't hesitate to contact us at
+    <p style="font-size: 10px;">If you need help, don’t hesitate to contact us at
       <b>"ovis@Dartmouth.edu"</b>!</p>
   </div>
 
   <div id="analysis-confirm" class="startHidden" title="Analysis" align="center">
     <span class="ui-icon ui-icon-alert" style="clear: both;"></span><span id="analysisText"></span>
     <br /><br />
-    <p style="font-size: 10px;">If you need help, don't hesitate to contact us at
+    <p style="font-size: 10px;">If you need help, don’t hesitate to contact us at
       <b>"ovis@Dartmouth.edu"</b>!</p>
   </div>
 
@@ -345,7 +345,7 @@
         </div>
         <div class="grid_1 drag_box_div">
           <div class="T_S draggable_box_white" id="2_6"
-            onmouseover="tooltip.show('This is an independently arranged transfer term with at least 2 courses approved to transfer to Dartmouth College.');"
+            onmouseover="tooltip.show('This is an independently arranged transfer term with at least 3 courses approved to transfer to Dartmouth College.');"
             onmouseout="tooltip.hide();" style="margin-left: 10px;"></div>
         </div>
         <!-- If you want to delete the L-Thesis button, simply delete the div class below -->
@@ -363,7 +363,7 @@
         <div class="grid_1 drag_box_div">
           <div class="L_Earned draggable_box_black" id="1_7"
             style="margin-top: 10px; margin-bottom: 10px; margin-left: -10px;"
-            onmouseover="tooltip.show('This is an earned leave term following some combination of at least 3 R, O, X or T(S) terms where the student may stay in the US or depart.  This cannot be selected unless at least 3 R, O, X or T(S) terms precede it.');"
+            onmouseover="tooltip.show('This is an earned leave term following some combination of at least 3 R, O, X or T terms where the student may stay in the US or depart.  This cannot be selected unless at least 3 R, O, X or T terms precede it.');"
             onmouseout="tooltip.hide();"></div>
         </div>
       </div>
@@ -372,7 +372,16 @@
         <div class="grid_1 drag_box_div">
           <div class="L_Unearned draggable_box_black" id="1_8"
             style="margin-top: 10px; margin-bottom: 10px; margin-left: -10px;"
-            onmouseover="tooltip.show('This is a leave term following less than 3 terms of R, O, X or T(S).');"
+            onmouseover="tooltip.show('This is a leave term following less than 3 terms of R, O, X or T.');"
+            onmouseout="tooltip.hide();"></div>
+        </div>
+      </div>
+      <div class="grid_1 noPrint" id="box_black" style="padding-bottom: 30px;">
+        <!-- Pick Box goes here -->
+        <div class="grid_1 drag_box_div">
+          <div class="L_DI_CPT draggable_box_black" id="1_8"
+            style="margin-top: 10px; margin-bottom: 10px; margin-left: -10px;"
+            onmouseover="tooltip.show('Available to students with a declared major. The divisional internship must occur during a student\'s earned leave term. Enrollment in the DI course will take place during the R/O/X term immediately following the leave term.');"
             onmouseout="tooltip.hide();"></div>
         </div>
       </div>
@@ -384,7 +393,8 @@
             Dartmouth Digital Arts at Dartmouth</a>, designed and Coded by <a target="_new" style="color: #999">
             Sang Jin Lee '13</a>, <a target="_new" style="color: #999">
             Diana Salsbury '15</a>, and <a target="_new" style="color: #999">
-            Roman Huszar '17</a>.
+            Roman Huszar '17</a>. Updated by <a target="_new" style="color: #999">
+              Eric Lu '25</a>.
         </p>
         <center>
           <a href="http://www.dali.dartmouth.edu">

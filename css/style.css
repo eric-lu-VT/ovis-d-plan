@@ -294,6 +294,11 @@ input.myBox:hover
 	background-size: 100% 100%;
 }
 
+.L_DI_CPT {
+	background: url(../img/L_DI_CPT.png) no-repeat center top #339999;
+	background-size: 100% 100%;
+}
+
 .RNotMoveable {
 	background: url(../img/R.png) no-repeat center top #075E28;
 	background-size: 100% 100%;
