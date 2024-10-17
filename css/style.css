@@ -219,6 +219,18 @@ input.myBox:hover
 	border: 1px solid #ddd;
 }
 
+#box_grey {
+	background: #555;
+	padding: 10px 20px;
+	height: 55px;
+	width: 40px;
+	border-radius: 6px;
+	margin-bottom: 20px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border: 1px solid #ddd;
+}
+
 .draggable_box_black,
 .draggable_box_white,
 .draggable_box_blue {
@@ -295,7 +307,7 @@ input.myBox:hover
 }
 
 .L_DI_CPT {
-	background: url(../img/L_DI_CPT.png) no-repeat center top #339999;
+	background: url(../img/L_DI_CPT.png) no-repeat center top #f5d442;
 	background-size: 100% 100%;
 }
 

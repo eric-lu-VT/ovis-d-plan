@@ -1704,7 +1704,7 @@ $(function () {
       row = ReceiverID.split("_")[0];
       col = ReceiverID.split("_")[1];
 
-      if (row == 4 && col == 4) return true;
+      if (row == currentMaxYear - 1 && col == 4) return true;
 
       if (col == 4) {
         row++;
@@ -1714,7 +1714,6 @@ $(function () {
       }
 
       var newID = "#" + row + "_" + col;
-      console.log('here6', row, col, $(newID).attr("class"));
       var lengthOfArray = $(newID).attr("class").split(' ').length;
       var k = 0;
       while (k <= lengthOfArray) {
