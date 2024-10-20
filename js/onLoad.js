@@ -1698,7 +1698,7 @@ $(function () {
       if (box != null) {
         ITEM_TO_ADD = box;
       }
-      REASON_FOR_ERROR = "L-DI CPT terms cannot be selected unless at least 3 R O X or T terms precede it. This has been switched to an Unearned Leave term.";
+      REASON_FOR_ERROR = "L-DI CPT terms cannot be selected unless at least 3 R O X or T terms precede it.";
       return false;
     } else { 
       row = ReceiverID.split("_")[0];
