@@ -350,7 +350,7 @@ $(function () {
 
       var lengthOfArray = $(gridID).attr("class").split(' ').length;
       var k = 1;
-      $(gridID).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned G');
+      $(gridID).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned L_DI_CPT');
 
     }
 
@@ -423,7 +423,7 @@ $(function () {
     //add undroppable in the new final row
     var currentFinalTerm = "div#" + (currentMaxYear - 2) + "_4";
     var activeClass = $(currentFinalTerm).attr("class").split(' ')[1];
-    $("." + activeClass).children().removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned G');
+    $("." + activeClass).children().removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned L_DI_CPT');
 
 
     configureDropDownList(document.getElementById("DDLGradYear"));
@@ -509,7 +509,7 @@ $(function () {
           bool = 1;
         }
         else if ($(gridID).attr("class").split(' ')[k] == "T_S") {
-          analysis = "T(S) is an independently arranged transfer term with at least 2 courses approved to transfer to Dartmouth College. If two courses are approved to transfer, OVIS must count this as one of the 3 academic 2-course loads allowed. See the Registrar's office for transfer approval. See OVIS for SEVIS approval. A newmust count this as one of the 3 academic 2-course loads allowed. See the I-20 will be issued by OVIS. At least 2 courses must transfer to remain SEVIS active.";
+          analysis = "T(S) is an independently arranged transfer term with at least 3 courses approved to transfer to Dartmouth College. If two courses are approved to transfer, OVIS must count this as one of the 3 academic 2-course loads allowed. See the Registrar's office for transfer approval. See OVIS for SEVIS approval. A newmust count this as one of the 3 academic 2-course loads allowed. See the I-20 will be issued by OVIS. At least 2 courses must transfer to remain SEVIS active.";
           bool = 1;
         }
         else if ($(gridID).attr("class").split(' ')[k] == "L_Thesis") {
@@ -517,7 +517,7 @@ $(function () {
           bool = 1;
         }
         else if ($(gridID).attr("class").split(' ')[k] == "L_Unearned") {
-          analysis = "L(Unearned) is a leave term following fewer than 3 terms of R O X or T(S). Student loses visa status and must depart the U.S. See OVIS to coordinate termination of the I-20 and departure from the U.S. A new I-20 will be required to return to enroll at Dartmouth. SEVIS fee must be paid again for all students. A new visa stamp will be required for all but Canadian students.";
+          analysis = "L(Unearned) is a leave term following fewer than 3 terms of R O X or T. Student loses visa status and must depart the U.S. See OVIS to coordinate termination of the I-20 and departure from the U.S. A new I-20 will be required to return to enroll at Dartmouth. SEVIS fee must be paid again for all students. A new visa stamp will be required for all but Canadian students.";
           bool = 1;
         }
         else if ($(gridID).attr("class").split(' ')[k] == "L_Earned") {
@@ -525,7 +525,7 @@ $(function () {
           bool = 1;
         }
         else if ($(gridID).attr("class").split(' ')[k] == "L_LOA") {
-          analysis = "I-20 will be TERMINATED.  L(LoA) is a Leave of Absence termination where the L term falls between two R terms but is taken after fewer than 3 enrolled terms of R O X or T(S).  Student losees visa status and must depart the U.S.  See OVIS to request termination date, and to coordinate departure from the U.S. and reactivation of the I-20.  Student will not be eligible for OPT work authorization until 3 terms of enrollment have been completed after the L(LoA).  A new I-20 will be required to return to Dartmouth College to resume study.";
+          analysis = "I-20 will be TERMINATED.  L(LoA) is a Leave of Absence termination where the L term falls between two R terms but is taken after fewer than 3 enrolled terms of R O X or T.  Student losees visa status and must depart the U.S.  See OVIS to request termination date, and to coordinate departure from the U.S. and reactivation of the I-20.  Student will not be eligible for OPT work authorization until 3 terms of enrollment have been completed after the L(LoA).  A new I-20 will be required to return to Dartmouth College to resume study.";
           bool = 1;
         }
         else if ($(gridID).attr("class").split(' ')[k] == "L_OPT") {
@@ -659,7 +659,7 @@ $(function () {
         }
         else if ($(gridID).attr("class").split(' ')[k] == "T_S") {
           modifiedHeight = modifiedHeight + 50;
-          analysis = "T(S) is an independently arranged transfer term with at least 2 courses approved to transfer to Dartmouth College. If two courses are approved to transfer, OVIS must count this as one of the 3 academic 2-course loads allowed. See the Registrar's office for transfer approval. See OVIS for SEVIS approval.  See the I-20 will be issued by OVIS. At least 2 courses must transfer to remain SEVIS active.";
+          analysis = "T(S) is an independently arranged transfer term with at least 3 courses approved to transfer to Dartmouth College. If two courses are approved to transfer, OVIS must count this as one of the 3 academic 2-course loads allowed. See the Registrar's office for transfer approval. See OVIS for SEVIS approval.  See the I-20 will be issued by OVIS. At least 2 courses must transfer to remain SEVIS active.";
         }
         else if ($(gridID).attr("class").split(' ')[k] == "L_Thesis") {
           modifiedHeight = modifiedHeight + 40;
@@ -667,7 +667,7 @@ $(function () {
         }
         else if ($(gridID).attr("class").split(' ')[k] == "L_Unearned") {
           modifiedHeight = modifiedHeight + 50;
-          analysis = "L(Unearned) is a leave term following fewer than 3 terms of R O X or T(S). Student loses visa status and must depart the U.S. See OVIS to coordinate termination of the I-20 and departure from the U.S. A new I-20 will be required to return to enroll at Dartmouth. SEVIS fee must be paid again for all students. A new visa stamp will be required for all but Canadian students.";
+          analysis = "L(Unearned) is a leave term following fewer than 3 terms of R O X or T. Student loses visa status and must depart the U.S. See OVIS to coordinate termination of the I-20 and departure from the U.S. A new I-20 will be required to return to enroll at Dartmouth. SEVIS fee must be paid again for all students. A new visa stamp will be required for all but Canadian students.";
         }
         else if ($(gridID).attr("class").split(' ')[k] == "L_Earned") {
           modifiedHeight = modifiedHeight + 20;
@@ -679,7 +679,7 @@ $(function () {
         }
         else if ($(gridID).attr("class").split(' ')[k] == "L_LOA") {
           modifiedHeight = modifiedHeight + 60;
-          analysis = "I-20 will be TERMINATED.  L(LoA) is a Leave of Absence termination where the L term falls between two R terms but is taken after fewer than 3 enrolled terms of R O X or T(S).  Student losees visa status and must depart the U.S.  See OVIS to request termination date, and to coordinate departure from the U.S. and reactivation of the I-20.  Student will not be eligible for OPT work authorization until 3 terms of enrollment have been completed after the L(LoA).  A new I-20 will be required to return to Dartmouth College to resume study.";
+          analysis = "I-20 will be TERMINATED.  L(LoA) is a Leave of Absence termination where the L term falls between two R terms but is taken after fewer than 3 enrolled terms of R O X or T.  Student losees visa status and must depart the U.S.  See OVIS to request termination date, and to coordinate departure from the U.S. and reactivation of the I-20.  Student will not be eligible for OPT work authorization until 3 terms of enrollment have been completed after the L(LoA).  A new I-20 will be required to return to Dartmouth College to resume study.";
         }
         else if ($(gridID).attr("class").split(' ')[k] == "G") {
           modifiedHeight = modifiedHeight + 50;
@@ -717,7 +717,7 @@ $(function () {
   // CLEAR Btn function. If an <a> with class row_#N is clicked, where #N is an integer, then look through element's children and remove any Term Tags
   $('a[class*="row_"]').live("click", function () {
     var activeClass = $(this).attr("class").split(' ')[1];
-    $("." + activeClass).children().removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned G');
+    $("." + activeClass).children().removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned L_DI_CPT');
   });
 
   $('.draggable_box_white, .draggable_box_blue, .draggable_box_black').draggable({
@@ -749,7 +749,7 @@ $(function () {
 
       var ReceiverTerm = ReceiverId.split("_")[0] * ReceiverId.split("_")[1];
       if ((finalTermId == ReceiverId) && ((typeOfTerm != "R") && (typeOfTerm != "G") && (typeOfTerm != "L_Thesis"))) {
-        $(this).removeClass("R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned G");
+        $(this).removeClass("R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned L_DI_CPT");
         $("#errorText").html("Only R or L_Thesis terms are permitted in your selected final term. This selection has been switched to an R.  Change your selected final term if you wish to drop this term here or cancel.");
         switchToR = 1;
         $(this).addClass("R");
@@ -760,11 +760,31 @@ $(function () {
 
         var bool = "false";
 
+        console.log('here0.8', typeOfTerm)
+        if (typeOfTerm != "R") {
+          bool = "true";
+          console.log('here0.9');
+          if (!L_DI_CPT_Check_Rev(this, ReceiverId, typeOfTerm)) {
+            console.log('here0.91');
+            $(this).removeClass('T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned L_DI_CPT');
+            if (useNotFlex == 0) {
+              $("#errorText2").html(REASON_FOR_ERROR);
+              //warnings.push("Term " + termDescriptor + ": " + REASON_FOR_ERROR);
+              $("#dialog-notflex").dialog('open');
+            }
+            else {
+              $("#errorText").html(REASON_FOR_ERROR);
+              switchToUnearned = 1;
+              $("#dialog-flex").dialog('open');
+            }
+          }
+        }
+
         if (typeOfTerm == "G") {
           bool = "true";
           if (graduatedTermCheck(this, ReceiverId)) {
             // if the check clears...
-            $(this).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned G');
+            $(this).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned L_DI_CPT');
             $(this).addClass(ui.draggable.attr("class").split(' ')[0]);
           }
           else {
@@ -778,7 +798,7 @@ $(function () {
           bool = "true";
           if (consecutiveTSCheck(this, ReceiverId)) {
             // if the check clears...
-            $(this).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned G');
+            $(this).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned L_DI_CPT');
             $(this).addClass(ui.draggable.attr("class").split(' ')[0]);
           }
           else { // otherwise display error message
@@ -798,7 +818,7 @@ $(function () {
           bool = "true";
           if (multiOXCheck(this, ReceiverId)) {
             // if the check clears...
-            $(this).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned G');
+            $(this).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned L_DI_CPT');
             $(this).addClass(ui.draggable.attr("class").split(' ')[0]);
           }
           else { // otherwise display error message
@@ -820,7 +840,7 @@ $(function () {
 
             if (multiOXCheck(this, ReceiverId)) {
               // if the check clears...
-              $(this).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned G');
+              $(this).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned L_DI_CPT');
               $(this).addClass(ui.draggable.attr("class").split(' ')[0]);
             }
             else { // otherwise display error message
@@ -848,7 +868,7 @@ $(function () {
           bool = "true";
           if (multiThesisCheck(this, ReceiverId)) {
             // if the check clears...
-            $(this).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned G');
+            $(this).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned L_DI_CPT');
             $(this).addClass(ui.draggable.attr("class").split(' ')[0]);
           }
           else { // otherwise display error message
@@ -869,7 +889,7 @@ $(function () {
           bool = "true";
           if (unearnedLeaveCheck(this, ReceiverId)) {
             // if the check clears...
-            $(this).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned G');
+            $(this).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned L_DI_CPT');
             $(this).addClass(ui.draggable.attr("class").split(' ')[0]);
           }
           else { // otherwise display error message
@@ -883,7 +903,7 @@ $(function () {
         if ((typeOfTerm == "L_Earned") || typeOfTerm == "L_OPT") {
           bool = "true";
           if (blueCheck(this, ReceiverId)) { // if the check clears...
-            $(this).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned G');
+            $(this).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned L_DI_CPT');
             $(this).addClass(ui.draggable.attr("class").split(' ')[0]);
           }
           else { // otherwise display error message
@@ -896,10 +916,31 @@ $(function () {
 
         }
 
+        if (typeOfTerm == "L_DI_CPT") {
+          bool = "true";
+          if (L_DI_CPT_Check(this, ReceiverId)) { // if the check clears...
+            $(this).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned L_DI_CPT');
+            $(this).addClass(ui.draggable.attr("class").split(' ')[0]);
+          }
+          else { // otherwise display error message
+            $(this).removeClass('L_DI_CPT');
+            if (useNotFlex == 0) {
+              $("#errorText2").html(REASON_FOR_ERROR);
+              //warnings.push("Term " + termDescriptor + ": " + REASON_FOR_ERROR);
+              $("#dialog-notflex").dialog('open');
+            }
+            else {
+              $("#errorText").html(REASON_FOR_ERROR);
+              switchToUnearned = 1;
+              $("#dialog-flex").dialog('open');
+            }
+          }
+        }
+
         if (typeOfTerm == "L_LOA") {
           bool = "true";
           if (loaCheck(this, ReceiverId)) { // if the check clears...
-            $(this).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned G');
+            $(this).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned L_DI_CPT');
             $(this).addClass(ui.draggable.attr("class").split(' ')[0]);
           }
           else { // otherwise display error message
@@ -919,12 +960,12 @@ $(function () {
         }
 
         if (bool == "true") {
-          $(this).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned G');
+          $(this).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned L_DI_CPT');
 
         }
 
 
-        console.log("adding: " + ui.draggable.attr("class").split(' ')[0]);
+        console.log("adding...: " + ui.draggable.attr("class").split(' ')[0]);
         $(this).addClass(ui.draggable.attr("class").split(' ')[0]);
       }
 
@@ -937,9 +978,9 @@ $(function () {
   $('#box_white, #box_black, #dropArea').droppable({
     accept: '.mainGridItem, .RNotMoveable',
     drop: function (event, ui) {
-      console.log("as;ldkfj");
       var droppedItemClass = ui.draggable.attr("class").split(' ')[2];
       var droppedItemID = ui.draggable.attr("id");
+      console.log("removing: " + ui.draggable.attr("class").split(' ')[0]);
       if (droppedItemClass == "RNotMoveable") {
         //$("#errorText").html(droppedItemID);
         $("#errorText2").html("First year fall, winter and spring must be R terms.  <font color=\"black\">See</font> your Undergraduate Dean if you want to withdraw from Dartmouth College in one of those terms.  <font color=\"black\">See</font> OVIS to coordinate termination of your I-20/visa status.");
@@ -947,7 +988,7 @@ $(function () {
       }
       var finalTerm = (currentMaxYear - 1) + "_";
 
-      $(ui.draggable).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned G');
+      $(ui.draggable).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned L_DI_CPT L_DI_CPT');
 
       warn();
     }
@@ -1593,12 +1634,154 @@ $(function () {
       if (box != null) {
         ITEM_TO_ADD = box;
       }
-      REASON_FOR_ERROR = "Blue box terms cannot be selected unless at least 3 R O X or T(S) terms precede it.  This has been switched to an Unearned Leave term.";
+      REASON_FOR_ERROR = "L(Earned) terms cannot be selected unless at least 3 R O X or T terms precede it. This has been switched to an Unearned Leave term.";
       return false;
     } else { // otherwise, allow the term to be droppable
       return true;
     }
+  }
 
+  // contains rule for dropping L_DI_CPT terms
+  function L_DI_CPT_Check(box, ReceiverID) {
+    var row = ReceiverID.split("_")[0];
+    var col = ReceiverID.split("_")[1];
+
+    // vars to count occurences of R,X,O terms
+    var prev = 0;
+
+    for (i = 0; i < 3; i++) {
+      var newRow;
+      var newCol;
+
+      if (col == 1) {
+        newRow = row - 1;
+        newCol = 4;
+      }
+      else {
+        newRow = row;
+        newCol = col - 1;
+      }
+
+      if (newRow == 0) {
+        break;
+      }
+
+      var newID = "#" + newRow + "_" + newCol;
+
+      //get type of term
+      var lengthOfArray = $(newID).attr("class").split(' ').length;
+      var k = 0;
+      while (k <= lengthOfArray) {
+        if ($(newID).attr("class").split(' ')[k] == "RNotMoveable") {
+          prev++;
+        }
+        else if ($(newID).attr("class").split(' ')[k] == "R") {
+          prev++;
+        }
+        else if ($(newID).attr("class").split(' ')[k] == "O") {
+          prev++;
+        }
+        else if ($(newID).attr("class").split(' ')[k] == "X") {
+          prev++;
+        }
+        else if ($(newID).attr("class").split(' ')[k] == "T_S") {
+          prev++;
+        }
+        k++;
+      }
+
+      row = newRow;
+      col = newCol;
+    }
+
+    if (prev < 3) { // if they have been "off" atleast once in the past term, then display notice
+      if (box != null) {
+        ITEM_TO_ADD = box;
+      }
+      REASON_FOR_ERROR = "L-DI CPT terms cannot be selected unless at least 3 R O X or T terms precede it.";
+      return false;
+    } else { 
+      row = ReceiverID.split("_")[0];
+      col = ReceiverID.split("_")[1];
+
+      if (row == currentMaxYear - 1 && col == 4) return true;
+
+      if (col == 4) {
+        row++;
+        col = 0;
+      } else {
+        col++;
+      }
+
+      var newID = "#" + row + "_" + col;
+      var lengthOfArray = $(newID).attr("class").split(' ').length;
+      var k = 0;
+      while (k <= lengthOfArray) {
+        var cName = $(newID).attr("class").split(' ')[k];
+
+        if (cName == "L_Thesis" || cName == "T_S" || cName == "L_Earned" || cName == "L_Unearned") {
+          if (box != null) {
+            ITEM_TO_ADD = box;
+          }
+          REASON_FOR_ERROR = "L-DI CPT terms must be followed by an R, O, or X term.";
+          useNotFlex = 0;
+          return false;        
+        } else if (cName == "X" || cName == "O") {
+          if (box != null) {
+            ITEM_TO_ADD = box;
+          }
+          REASON_FOR_ERROR = "You must request a letter of support from the Associate Dean for International and Interdisciplinary Studies, granting permission to enroll in the DI course while on a study away program.";
+          useNotFlex = 1;
+          return false;
+        }
+
+        k++;
+      }
+
+      return true;
+    }
+  }
+
+  function L_DI_CPT_Check_Rev(box, ReceiverID, typeOfTerm) {
+    row = ReceiverID.split("_")[0];
+    col = ReceiverID.split("_")[1];
+
+    if (row == 0 && col == 0) return true;
+
+    if (col == 0) {
+      row--;
+      col = 4;
+    } else {
+      col--;
+    }
+
+    var newID = "#" + row + "_" + col;
+    console.log('here7', row, col, $(newID).attr("class"));
+    var lengthOfArray = $(newID).attr("class").split(' ').length;
+    var k = 0;
+    while (k <= lengthOfArray) {
+      var cName = $(newID).attr("class").split(' ')[k];
+
+      if (cName == "L_DI_CPT" && (typeOfTerm == "O" || typeOfTerm == "X")) {
+        if (box != null) {
+          ITEM_TO_ADD = box;
+        }
+        REASON_FOR_ERROR = "You must request a letter of support from the Associate Dean for International and Interdisciplinary Studies, granting permission to enroll in the DI course while on a study away program.";
+        useNotFlex = 1;
+        return false;
+      } else if (cName == "L_DI_CPT") {
+        if (box != null) {
+          ITEM_TO_ADD = box;
+        }
+        REASON_FOR_ERROR = "L-DI CPT terms must be followed by an R, O, or X term.";
+        useNotFlex = 0;
+        return false;        
+      }
+
+      k++;
+    }
+
+    return true;    
   }
 
 
@@ -1613,11 +1796,11 @@ $(function () {
         console.log("SwitchtoR=" + switchToR);
         console.log("switchToUnearned=" + switchToUnearned);
         if (switchToUnearned == 1) {
-          $(ITEM_TO_ADD).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned G');
+          $(ITEM_TO_ADD).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned L_DI_CPT');
           $(ITEM_TO_ADD).addClass("L_Unearned");
         } else if (switchToR == 1) {
           console.log("a;lsdkfja;lsdkfja;lsdkfja;ldksjfa;lsdkj");
-          $(ITEM_TO_ADD).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned G');
+          $(ITEM_TO_ADD).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned L_DI_CPT');
           $(ITEM_TO_ADD).addClass("L_Unearned");
         }
         switchToUnearned = 0;
@@ -1625,7 +1808,7 @@ $(function () {
         $(this).dialog("close");
       },
       "Cancel": function () {
-        $(ITEM_TO_ADD).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned G');
+        $(ITEM_TO_ADD).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned L_DI_CPT');
         $(this).dialog("close");
       }
     }
@@ -1638,7 +1821,7 @@ $(function () {
     autoOpen: false,
     buttons: {
       "Cancel": function () {
-        $(ITEM_TO_ADD).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned G');
+        $(ITEM_TO_ADD).removeClass('R X O T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned L_DI_CPT');
         $(this).dialog("close");
       }
     }
