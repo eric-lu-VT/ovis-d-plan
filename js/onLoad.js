@@ -760,12 +760,9 @@ $(function () {
 
         var bool = "false";
 
-        console.log('here0.8', typeOfTerm)
         if (typeOfTerm != "R") {
           bool = "true";
-          console.log('here0.9');
           if (!L_DI_CPT_Check_Rev(this, ReceiverId, typeOfTerm)) {
-            console.log('here0.91');
             $(this).removeClass('T_S L_OPT L_LOA L_Thesis L_Earned L_Unearned L_DI_CPT');
             if (useNotFlex == 0) {
               $("#errorText2").html(REASON_FOR_ERROR);
@@ -1605,7 +1602,7 @@ $(function () {
       var newID = "#" + newRow + "_" + newCol;
 
       //get type of term
-      var lengthOfArray = $(newID).attr("class").split(' ').length;
+      var lengthOfArray = $(newID)?.attr("class")?.split(' ')?.length ?? 0;
       var k = 0;
       while (k <= lengthOfArray) {
         if ($(newID).attr("class").split(' ')[k] == "RNotMoveable") {
@@ -1714,10 +1711,10 @@ $(function () {
       }
 
       var newID = "#" + row + "_" + col;
-      var lengthOfArray = $(newID).attr("class").split(' ').length;
+      var lengthOfArray = $(newID)?.attr("class")?.split(' ')?.length ?? 0;
       var k = 0;
       while (k <= lengthOfArray) {
-        var cName = $(newID).attr("class").split(' ')[k];
+        var cName = $(newID)?.attr("class")?.split(' ')?.[k] ?? '';
 
         if (cName == "L_Thesis" || cName == "T_S" || cName == "L_Earned" || cName == "L_Unearned") {
           if (box != null) {
@@ -1756,11 +1753,10 @@ $(function () {
     }
 
     var newID = "#" + row + "_" + col;
-    console.log('here7', row, col, $(newID).attr("class"));
-    var lengthOfArray = $(newID).attr("class").split(' ').length;
+    var lengthOfArray = $(newID)?.attr("class")?.split(' ')?.length ?? 0;
     var k = 0;
     while (k <= lengthOfArray) {
-      var cName = $(newID).attr("class").split(' ')[k];
+      var cName = $(newID)?.attr("class")?.split(' ')?.[k] ?? '';
 
       if (cName == "L_DI_CPT" && (typeOfTerm == "O" || typeOfTerm == "X")) {
         if (box != null) {
